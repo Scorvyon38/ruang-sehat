@@ -1,75 +1,32 @@
-# React + TypeScript + Vite
+# 🌿 Ruang Sehat
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> *"Helping people understand their health, one day at a time."*
 
-Currently, two official plugins are available:
+**Ruang Sehat** adalah platform digital edukasi dan pendampingan kehidupan bagi pasien diabetes, keluarga pasien, serta masyarakat umum. Proyek ini menggabungkan antarmuka bergaya *Editorial Healthcare*, pemantauan kesehatan mandiri, serta asisten AI berespons cepat dengan basis pengetahuan medis terverifikasi.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+### 🔑 Fitur & Fitur Utama Produk
+- **Edukasi Diabetes Terverifikasi:** Informasi medis dasar, mitos/fakta, dan panduan gaya hidup dalam bahasa sederhana.
+- **Ruang Tenang:** Modul relaksasi dan pendampingan pengelolaan stres bagi pasien diabetes.
+- **Pencatatan & Pemantauan Kesehatan (Mobile):** Logging gula darah, riwayat pemeriksaan, serta grafik perkembangan harian.
+- **Tanya AI (RAG Engine):** Asisten AI edukasi berbasis sumber medis resmi tanpa memberikan diagnosis medis otomatis.
+- **Sistem Tanda Bahaya:** Edukasi pencegahan dan deteksi dini luka/infeksi spesifik pasien diabetes.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+### 🛠️ Tech Stack
+- **Frontend Web:** React 19, TypeScript, Vite, Tailwind CSS v4, Lucide React
+- **Backend API:** Node.js, Express.js, TypeScript
+- **Database:** PostgreSQL via Supabase (Local-first setup)
+- **Mobile App:** Flutter & Dart
+- **AI Engine:** Python (FastAPI) + RAG (Ollama & Open-Source LLM)
+- **Design System:** Editorial Healthcare System (*Forest Green*, *Warm Ivory*, *Newsreader*, *DM Sans*, *IBM Plex Mono*)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+### 🛡️ Batasan Keamanan & Medis (Medical Disclaimer)
+Aplikasi ini dirancang sebagai media edukasi dan pendampingan harian. Platform **TIDAK**:
+1. Memberikan diagnosis medis otomatis.
+2. Menentukan dosis obat atau resep secara mandiri.
+3. Menggantikan peran dan keputusan profesional dari dokter atau tenaga kesehatan.
